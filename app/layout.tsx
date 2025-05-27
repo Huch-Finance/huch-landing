@@ -75,11 +75,6 @@ export const metadata: Metadata = {
     creator: "@huch",
     site: "@huch",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   applicationName: "Huch.",
   appleWebApp: {
     capable: true,
@@ -89,10 +84,18 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  themeColor: "#924FE8",
   category: "technology",
   generator: "v0.dev",
+  metadataBase: new URL("https://huch.finance"),
 }
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+}
+
+export const themeColor = "#924FE8"
 
 export default function RootLayout({
   children,
