@@ -877,7 +877,7 @@ export default function Home() {
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center justify-center">
                     <Logo size={32} className="mr-2" />
-                    <span className="text-xl font-semibold bg-clip-text text-white">Huch.</span>
+                    <span className="text-xl font-semibold bg-clip-text text-white">Huch</span>
                   </div>
                   <p className="text-zinc-400 text-sm">
                     The smart alternative to selling your CS2 skins. Get cash now and keep your valuable items.
