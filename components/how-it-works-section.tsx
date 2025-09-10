@@ -449,7 +449,7 @@ Complete Tokenization & Trading Workflow
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   className="bg-zinc-900 hover:bg-zinc-800 text-white rounded-full px-6 py-3 h-auto text-sm"
-                  onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
+                  onClick={() => window.open("https://app.huch.finance/", "_blank")}
                 >
                   Launch App <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>

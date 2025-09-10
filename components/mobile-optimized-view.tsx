@@ -23,7 +23,7 @@ export default function MobileOptimizedView() {
           {/* Bouton de liste d'attente */}
           <Button
             className="bg-zinc-800 hover:bg-zinc-700 text-white rounded-full px-4 py-1.5 h-auto text-xs flex items-center gap-1.5"
-            onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
+            onClick={() => window.open("https://app.huch.finance/", "_blank")}
           >
             <span>Go to App</span>
             <ArrowRight className="w-3 h-3" />
@@ -51,7 +51,7 @@ export default function MobileOptimizedView() {
             <div className="flex flex-col items-center justify-center gap-3 w-full">
               <Button
                 className="bg-zinc-900 hover:bg-zinc-800 text-white rounded-full px-6 py-2.5 h-auto text-sm w-full"
-                onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
+                onClick={() => window.open("https://app.huch.finance/", "_blank")}
               >
                 Go to App <ArrowRight className="w-4 h-4 ml-1" />
               </Button>

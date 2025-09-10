@@ -132,7 +132,7 @@ export default function Home() {
           {/* Go to App Button */}
           <Button
             className="bg-zinc-800 hover:bg-zinc-700 text-white rounded-full px-4 py-1.5 h-auto text-xs flex items-center gap-1.5"
-            onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
+            onClick={() => window.open("https://app.huch.finance/", "_blank")}
           >
             <span>Go to App</span>
             <svg
@@ -288,7 +288,7 @@ export default function Home() {
               >
                 <Button
                   className="bg-zinc-900 hover:bg-zinc-800 text-white rounded-full px-6 py-2.5 sm:py-3 h-auto text-sm md:text-md w-full sm:w-auto"
-                  onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
+                  onClick={() => window.open("https://app.huch.finance/", "_blank")}
                 >
                   Go to App <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
@@ -471,7 +471,7 @@ export default function Home() {
 
                   <Button
                     className="mt-8 bg-zinc-800 hover:bg-zinc-700 text-white rounded-full px-6 py-3 h-auto text-sm w-fit"
-                    onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
+                    onClick={() => window.open("https://app.huch.finance/", "_blank")}
                   >
                     Go to App <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>
@@ -895,7 +895,7 @@ export default function Home() {
               <div className="mt-12 text-center">
                 <Button
                   className="bg-zinc-800 hover:bg-zinc-700 text-white rounded-full px-6 py-3 h-auto text-sm"
-                  onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
+                  onClick={() => window.open("https://app.huch.finance/", "_blank")}
                 >
                   Get Started <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
