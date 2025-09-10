@@ -8,6 +8,7 @@ import Logo from "@/components/logo"
 import DecorativeLines from "@/components/decorative-lines"
 import StarsBackground from "@/components/stars-background"
 import StaticBackground from "@/components/static-background"
+import HowItWorksSection from "@/components/how-it-works-section"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { useRef as reactUseRef } from "react"
 
@@ -128,12 +129,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Join Waitlist Button */}
+          {/* Go to App Button */}
           <Button
             className="bg-zinc-800 hover:bg-zinc-700 text-white rounded-full px-4 py-1.5 h-auto text-xs flex items-center gap-1.5"
-            onClick={() => window.open("https://form.typeform.com/to/ug5MltfW", "_blank")}
+            onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
           >
-            <span>Join Waitlist</span>
+            <span>Go to App</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
@@ -287,9 +288,9 @@ export default function Home() {
               >
                 <Button
                   className="bg-zinc-900 hover:bg-zinc-800 text-white rounded-full px-6 py-2.5 sm:py-3 h-auto text-sm md:text-md w-full sm:w-auto"
-                  onClick={() => window.open("https://form.typeform.com/to/ug5MltfW", "_blank")}
+                  onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
                 >
-                  Join Waitlist <ArrowRight className="w-4 h-4 ml-1" />
+                  Go to App <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
                 <Button
                   className="bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-full px-6 py-2.5 sm:py-3 h-auto text-sm md:text-md flex items-center gap-2 w-full sm:w-auto mt-2 sm:mt-0"
@@ -470,9 +471,9 @@ export default function Home() {
 
                   <Button
                     className="mt-8 bg-zinc-800 hover:bg-zinc-700 text-white rounded-full px-6 py-3 h-auto text-sm w-fit"
-                    onClick={() => window.open("https://form.typeform.com/to/ug5MltfW", "_blank")}
+                    onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
                   >
-                    Join Waitlist <ArrowRight className="w-4 h-4 ml-1" />
+                    Go to App <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>
                 </motion.div>
 
@@ -584,6 +585,39 @@ export default function Home() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed How It Works Section */}
+      <HowItWorksSection />
+
+      {/* Skins Showcase Section */}
+      <section className="pt-8 pb-20 relative overflow-hidden">
+        <div className="w-full max-w-[1320px] mx-auto bg-[#0B0C0E] rounded-3xl overflow-hidden relative border border-zinc-800/50 p-8 md:p-12">
+          {/* Grands dégradés blancs/gris */}
+          <div className="absolute inset-0 overflow-hidden rounded-3xl">
+            {/* Dégradé principal côté gauche */}
+            <div className="absolute -left-[20%] top-[10%] w-[70%] h-[80%] bg-white/5 rounded-full blur-[120px]" />
+
+            {/* Dégradé principal côté droit */}
+            <div className="absolute -right-[20%] top-[10%] w-[70%] h-[80%] bg-white/10 rounded-full blur-[120px]" />
+
+            {/* Dégradé supplémentaire en haut */}
+            <div className="absolute top-[-30%] left-[30%] w-[40%] h-[40%] bg-white/5 rounded-full blur-[100px]" />
+          </div>
+
+          {/* Effet de paillettes/étoiles */}
+          <div className="absolute inset-0 opacity-30">
+            <StarsBackground />
+          </div>
+
+          {/* Lignes décoratives */}
+          <div className="absolute inset-0 opacity-30">
+            <DecorativeLines />
+          </div>
+
+          <div className="relative z-10">
             {/* Skins Showcase Section */}
             <div className="relative z-10 mb-20 mt-16">
               <div className="w-full h-px bg-zinc-800/50 mb-16 bg-gradient-to-r from-transparent via-zinc-700/30 to-transparent"></div>
@@ -861,7 +895,7 @@ export default function Home() {
               <div className="mt-12 text-center">
                 <Button
                   className="bg-zinc-800 hover:bg-zinc-700 text-white rounded-full px-6 py-3 h-auto text-sm"
-                  onClick={() => window.open("https://form.typeform.com/to/ug5MltfW", "_blank")}
+                  onClick={() => window.open("https://www.app.huch.finance/", "_blank")}
                 >
                   Get Started <ArrowRight className="w-4 h-4 ml-1" />
                 </Button>
