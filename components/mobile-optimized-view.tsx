@@ -17,7 +17,7 @@ export default function MobileOptimizedView() {
           {/* Logo et nom de marque */}
           <a href="/" className="flex items-center">
             <Logo size={32} className="mr-2" />
-            <span className="text-xl font-semibold text-white">Huch.</span>
+            <span className="text-xl font-semibold text-white">HUCH</span>
           </a>
 
           {/* Bouton de liste d'attente */}
@@ -73,9 +73,9 @@ export default function MobileOptimizedView() {
       {/* Section À propos simplifiée */}
       <section className="p-4 pb-12">
         <div className="w-full bg-[#0B0C0E] rounded-2xl overflow-hidden relative border border-zinc-800/50 p-6">
-          <h2 className="text-2xl font-bold mb-4 text-center">About Huch</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">About HUCH</h2>
           <p className="text-sm text-zinc-300 mb-6">
-            Huch is a revolutionary platform that allows CS2 players to leverage their valuable 
+            HUCH is a revolutionary platform that allows CS2 players to leverage their valuable 
             skins without selling them. Get instant cash loans using your skins as collateral.
           </p>
           
@@ -109,7 +109,7 @@ export default function MobileOptimizedView() {
         <div className="flex flex-col items-center">
           <Logo size={24} className="mb-2" />
           <p className="text-xs text-zinc-500 mb-4 text-center">
-            © 2025 Huch. All rights reserved.
+            © 2025 HUCH. All rights reserved.
           </p>
           <div className="flex space-x-4">
             <a href="https://discord.gg/xjhCJTfHQ9" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white">

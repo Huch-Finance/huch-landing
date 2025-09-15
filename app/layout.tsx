@@ -16,18 +16,18 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Huch.",
-    template: "%s | Huch",
+    default: "HUCH",
+    template: "%s | HUCH",
   },
   description:
-    "Huch, take loan from your cs2 skins",
+    "HUCH, take loan from your cs2 skins",
   keywords: [
     "counter strike 2",
     "CS2",
   ],
-  authors: [{ name: "Huch." }],
-  creator: "Huch.",
-  publisher: "Huch.",
+  authors: [{ name: "HUCH" }],
+  creator: "HUCH",
+  publisher: "HUCH",
   robots: {
     index: true,
     follow: true,
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://huch.finance",
-    siteName: "Huch",
-    title: "Huch, take loan from your cs2 skin",
+    siteName: "HUCH",
+    title: "HUCH, take loan from your cs2 skin",
     description:
       "The smart alternative to selling. Get cash now and keep your valuable skins. Repay when you're ready and get them back.",
     images: [
@@ -62,23 +62,23 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Huch Logo",
+        alt: "HUCH Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Huch, take loan from your cs2 skin",
+    title: "HUCH, take loan from your cs2 skin",
     description:
       "The smart alternative to selling. Get cash now and keep your valuable skins. Repay when you're ready and get them back.",
     images: ["/logo.png"],
     creator: "@huch",
     site: "@huch",
   },
-  applicationName: "Huch.",
+  applicationName: "HUCH",
   appleWebApp: {
     capable: true,
-    title: "Huch.",
+    title: "HUCH",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {

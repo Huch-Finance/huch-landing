@@ -80,7 +80,7 @@ export default function Home() {
           {/* Logo and Brand Name */}
           <a href="/" className="flex items-center">
             <Logo size={36} className="mr-2" />
-            <span className="text-xl font-semibold bg-clip-text text-white">Huch.</span>
+            <span className="text-xl font-semibold bg-clip-text text-white">HUCH</span>
           </a>
 
           {/* Center Navigation with Documentation Link and Social Links */}
@@ -383,7 +383,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="inline-block mb-3 px-4 py-1.5 bg-zinc-900/80 backdrop-blur-sm rounded-full border border-zinc-800/50"
               >
-                <span className="text-sm text-zinc-400">Introducing Huch</span>
+                <span className="text-sm text-zinc-400">Introducing HUCH</span>
               </motion.div>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -401,7 +401,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="max-w-2xl mx-auto text-zinc-400 text-lg"
               >
-                Huch is the first platform that lets you borrow real money using your CS2 skins as collateral — and
+                HUCH is the first platform that lets you borrow real money using your CS2 skins as collateral — and
                 get back your ownership after repay.
               </motion.p>
             </div>
@@ -416,9 +416,9 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="flex flex-col justify-center"
                 >
-                  <h4 className="text-xl font-semibold mb-2">Why Choose Huch</h4>
+                  <h4 className="text-xl font-semibold mb-2">Why Choose HUCH</h4>
                   <p className="text-zinc-400 mb-8">
-                    Huch offers a revolutionary alternative to traditional skin marketplaces. Get cash for your valuable
+                    HUCH offers a revolutionary alternative to traditional skin marketplaces. Get cash for your valuable
                     skins without losing them forever.
                   </p>
 
@@ -441,7 +441,7 @@ export default function Home() {
                       <div>
                         <h4 className="text-lg font-medium mb-1">Keep Your Skins</h4>
                         <p className="text-zinc-400">
-                          Unlike marketplaces where you sell your skins permanently, with Huch you always get your skins
+                          Unlike marketplaces where you sell your skins permanently, with HUCH you always get your skins
                           back after repaying your loan.
                         </p>
                       </div>
@@ -465,7 +465,7 @@ export default function Home() {
                       <div>
                         <h4 className="text-lg font-medium mb-1">Competitive Value</h4>
                         <p className="text-zinc-400">
-                          While resale sites offer 70-75% of value but take your skins forever, Huch lets you borrow up
+                          While resale sites offer 70-75% of value but take your skins forever, HUCH lets you borrow up
                           to 65% while keeping ownership.
                         </p>
                       </div>
@@ -525,7 +525,7 @@ export default function Home() {
 
                     {/* Concept visualization */}
                     <div className="relative z-10">
-                      <h4 className="text-xl font-semibold mb-2">How Huch Works</h4>
+                      <h4 className="text-xl font-semibold mb-2">How HUCH Works</h4>
                       <p className="text-zinc-400 text-sm mb-6">
                         Get cash for your CS2 skins without selling them. Repay your loan to get your skins back.
                       </p>
@@ -938,7 +938,7 @@ export default function Home() {
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center justify-center">
                     <Logo size={32} className="mr-2" />
-                    <span className="text-xl font-semibold bg-clip-text text-white">Huch</span>
+                    <span className="text-xl font-semibold bg-clip-text text-white">HUCH</span>
                   </div>
                   <p className="text-zinc-400 text-sm">
                     The smart alternative to selling your CS2 skins. Get cash now and keep your valuable items.
@@ -979,12 +979,12 @@ export default function Home() {
 
                 {/* Disclaimer */}
                 <p className="text-xs text-zinc-500 mb-4 max-w-md mx-auto">
-                  Huch is not affiliated with Valve Corporation or Counter-Strike 2. All CS2 skin names and images are
+                  HUCH is not affiliated with Valve Corporation or Counter-Strike 2. All CS2 skin names and images are
                   property of their respective owners.
                 </p>
 
                 {/* Copyright */}
-                <p className="text-xs text-zinc-600">&copy; {new Date().getFullYear()} Huch. All rights reserved.</p>
+                <p className="text-xs text-zinc-600">&copy; {new Date().getFullYear()} HUCH. All rights reserved.</p>
               </div>
             </footer>
           </div>

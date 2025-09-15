@@ -87,7 +87,7 @@ export default function DocsPage() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Logo size={36} className="mr-2" />
-            <span className="text-xl font-semibold bg-clip-text text-white">Huch.</span>
+            <span className="text-xl font-semibold bg-clip-text text-white">HUCH</span>
           </Link>
 
           {/* Desktop Navigation */}
