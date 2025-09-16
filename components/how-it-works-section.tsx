@@ -18,67 +18,91 @@ import {
   Lock,
   Percent,
   Calendar,
-  AlertTriangle
+  AlertTriangle,
+  Zap,
+  Target,
+  Trophy,
+  Sparkles
 } from "lucide-react"
 
 export default function HowItWorksSection() {
   return (
     <section className="py-20 relative overflow-hidden">
-      <div className="w-full max-w-[1320px] mx-auto bg-[#0B0C0E] rounded-3xl overflow-hidden relative border border-zinc-800/50 p-8 md:p-12">
-        {/* Background gradients */}
-        <div className="absolute inset-0 overflow-hidden rounded-3xl">
-          <div className="absolute -left-[20%] top-[10%] w-[70%] h-[80%] bg-white/5 rounded-full blur-[120px]" />
-          <div className="absolute -right-[20%] top-[10%] w-[70%] h-[80%] bg-white/10 rounded-full blur-[120px]" />
-          <div className="absolute top-[-30%] left-[30%] w-[40%] h-[40%] bg-white/5 rounded-full blur-[100px]" />
+      <div className="w-full max-w-[1400px] mx-auto relative">
+        {/* Gaming-themed background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/30 to-black rounded-3xl z-0" />
+        <div className="absolute inset-0 opacity-5 z-0 pointer-events-none">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 35px,
+              rgba(255, 117, 0, 0.1) 35px,
+              rgba(255, 117, 0, 0.1) 70px
+            )`
+          }} />
         </div>
+        
+        <div className="relative bg-black/60 backdrop-blur-xl rounded-3xl border border-orange-500/20 p-8 md:p-12 shadow-2xl shadow-orange-500/5 z-10">
+          {/* Animated gradient orbs */}
+          <div className="absolute inset-0 overflow-hidden rounded-3xl z-0 pointer-events-none">
+            <div className="absolute -left-[20%] top-[10%] w-[70%] h-[80%] bg-orange-500/5 rounded-full blur-[120px] animate-pulse" />
+            <div className="absolute -right-[20%] top-[10%] w-[70%] h-[80%] bg-purple-500/5 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
+            <div className="absolute top-[-30%] left-[30%] w-[40%] h-[40%] bg-cyan-500/5 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "2s" }} />
+          </div>
 
-        <div className="relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="relative z-10">
+            {/* Enhanced Section Header with Gaming Style */}
+          <div className="text-center mb-16 relative z-20">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="inline-block mb-3 px-4 py-1.5 bg-zinc-900/80 backdrop-blur-sm rounded-full border border-zinc-800/50"
+              className="inline-flex items-center gap-2 mb-6 px-6 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full backdrop-blur-xl"
             >
-              <span className="text-sm text-zinc-400">Complete Platform Guide</span>
+              <Target className="w-4 h-4 text-orange-400" />
+              <span className="text-sm font-semibold text-orange-300 uppercase tracking-wider">Platform Guide</span>
+              <Trophy className="w-4 h-4 text-orange-400" />
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+              className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 uppercase relative z-20"
             >
-              How Huch Works
+              <span className="text-white">How </span>
+              <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">HUCH Works</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="max-w-3xl mx-auto text-zinc-400 text-lg"
+              className="max-w-3xl mx-auto text-gray-300 text-lg"
             >
-              Huch revolutionizes CS2 skin trading by converting your Steam skins into blockchain NFTs 
-              and enabling instant redemption back to Steam. Trade freely without Steam restrictions.
+              <span className="text-orange-400 font-semibold">Level up your trading game.</span> Convert CS2 skins to blockchain NFTs, 
+              trade instantly without restrictions, and redeem back to Steam anytime.
             </motion.p>
           </div>
 
           {/* Two Core Features */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-            {/* Feature 1: Steam to NFT Tokenization */}
+            {/* Feature 1: Steam to NFT Tokenization - Gaming Card Style */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -50, rotateY: -10 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-black/30 rounded-xl border border-zinc-800/50 p-8 relative overflow-hidden group hover:border-[#8564FA]/50 transition-all"
+              className="gaming-card rounded-2xl p-8 relative overflow-hidden group"
+              style={{ transformStyle: "preserve-3d" }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#8564FA]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-lg bg-[#8564FA]/20 flex items-center justify-center mb-6">
-                  <Coins className="w-8 h-8 text-[#8564FA]" />
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500/30 to-purple-600/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/20">
+                  <Coins className="w-8 h-8 text-purple-400 drop-shadow-lg" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">Steam to NFT Tokenization</h3>
                 <p className="text-zinc-400 text-base mb-6">
@@ -106,18 +130,20 @@ export default function HowItWorksSection() {
               </div>
             </motion.div>
 
-            {/* Feature 2: Burn to Redeem */}
+            {/* Feature 2: Burn to Redeem - Gaming Card Style */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 50, rotateY: 10 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              whileHover={{ scale: 1.02, rotateY: -5 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-black/30 rounded-xl border border-zinc-800/50 p-8 relative overflow-hidden group hover:border-orange-500/50 transition-all"
+              className="gaming-card rounded-2xl p-8 relative overflow-hidden group"
+              style={{ transformStyle: "preserve-3d" }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10">
-                <div className="w-16 h-16 rounded-lg bg-orange-500/20 flex items-center justify-center mb-6">
-                  <Flame className="w-8 h-8 text-orange-500" />
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500/30 to-red-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-orange-500/20">
+                  <Flame className="w-8 h-8 text-orange-400 drop-shadow-lg" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">Burn NFT to Redeem Skins</h3>
                 <p className="text-zinc-400 text-base mb-6">
@@ -464,6 +490,7 @@ Complete Tokenization & Trading Workflow
                 </Button>
               </div>
             </motion.div>
+          </div>
           </div>
         </div>
       </div>

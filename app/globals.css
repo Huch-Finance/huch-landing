@@ -2,20 +2,289 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Gaming-focused design without external font imports */
+
+/* Global Styles */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
-  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #0f1419 50%, #0a0a0a 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* CS2-Themed Background Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 117, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(79, 209, 197, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 20, 25, 0.8);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff7500 0%, #ff5e00 100%);
+  border-radius: 5px;
+  border: 2px solid rgba(15, 20, 25, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ff8a00 0%, #ff6e00 100%);
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(255, 117, 0, 0.3);
+  color: #ffffff;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* High-contrast chrome text effect */
+  .text-chrome {
+    @apply bg-clip-text text-transparent;
+    background-image:
+      linear-gradient(90deg,
+        #f8fafc 0%,
+        #e5e7eb 8%,
+        #cbd5e1 16%,
+        #9ca3af 28%,
+        #f8fafc 40%,
+        #d1d5db 52%,
+        #9ca3af 64%,
+        #e5e7eb 78%,
+        #f8fafc 100%
+      ),
+      linear-gradient(110deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.0) 35%,
+        rgba(255,255,255,0.55) 50%,
+        rgba(255,255,255,0.0) 65%,
+        rgba(255,255,255,0) 100%
+      );
+    background-blend-mode: screen;
+    background-size: 100% 100%, 200% 100%;
+    filter: drop-shadow(0 2px 8px rgba(255,255,255,0.12)) drop-shadow(0 1px 0 rgba(0,0,0,0.45));
+  }
+
+  .animate-chrome-sheen {
+    animation: chromeSheen 2.8s linear infinite;
+    background-position: 0 0, -200% 0;
+  }
+
+  @keyframes chromeSheen {
+    0% { background-position: 0 0, -200% 0; }
+    100% { background-position: 0 0, 200% 0; }
+  }
+  
+  /* CS2 Gradient Text Classes */
+  .text-cs2-gradient {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, #ff7500 0%, #ff5e00 50%, #ff9100 100%);
+  }
+  
+  .text-crypto-gradient {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, #8b5cf6 0%, #4fd1c5 100%);
+  }
+  
+  /* Glow Effects */
+  .glow-orange {
+    filter: drop-shadow(0 0 20px rgba(255, 117, 0, 0.5));
+  }
+  
+  .glow-purple {
+    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.5));
+  }
+  
+  .glow-cyan {
+    filter: drop-shadow(0 0 20px rgba(79, 209, 197, 0.5));
+  }
+  
+  /* Gaming Card Hover Effect */
+  .gaming-card {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.9) 0%, rgba(20, 25, 35, 0.9) 100%);
+    border: 1px solid rgba(255, 117, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .gaming-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 117, 0, 0.5);
+    box-shadow: 
+      0 10px 40px rgba(255, 117, 0, 0.2),
+      0 0 60px rgba(255, 117, 0, 0.1),
+      inset 0 0 30px rgba(255, 117, 0, 0.05);
+  }
+  
+  /* Animated Background Gradient */
+  .animated-bg-gradient {
+    background: linear-gradient(-45deg, #0a0a0a, #1a1a2e, #16213e, #0f3460);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Weapon Float Animation */
+  @keyframes weaponFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(1deg); }
+    75% { transform: translateY(5px) rotate(-1deg); }
+  }
+  
+  .weapon-float {
+    animation: weaponFloat 6s ease-in-out infinite;
+  }
+  
+  /* Pulse Animation for CTAs */
+  @keyframes pulseCTA {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  .pulse-cta {
+    animation: pulseCTA 2s ease-in-out infinite;
+  }
+  
+  /* Glitch Effect */
+  @keyframes glitch {
+    0%, 100% {
+      text-shadow: 
+        0.02em 0 0 rgba(255, 0, 0, 0.75),
+        -0.02em -0.02em 0 rgba(0, 255, 0, 0.75),
+        0.025em 0.02em 0 rgba(0, 0, 255, 0.75);
+    }
+    14% {
+      text-shadow: 
+        0.02em 0 0 rgba(255, 0, 0, 0.75),
+        -0.02em -0.02em 0 rgba(0, 255, 0, 0.75),
+        0.025em 0.02em 0 rgba(0, 0, 255, 0.75);
+    }
+    15% {
+      text-shadow: 
+        -0.02em -0.025em 0 rgba(255, 0, 0, 0.75),
+        0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+        -0.02em -0.02em 0 rgba(0, 0, 255, 0.75);
+    }
+    49% {
+      text-shadow: 
+        -0.02em -0.025em 0 rgba(255, 0, 0, 0.75),
+        0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+        -0.02em -0.02em 0 rgba(0, 0, 255, 0.75);
+    }
+    50% {
+      text-shadow: 
+        0.025em 0.02em 0 rgba(255, 0, 0, 0.75),
+        0.02em 0 0 rgba(0, 255, 0, 0.75),
+        0 -0.02em 0 rgba(0, 0, 255, 0.75);
+    }
+    99% {
+      text-shadow: 
+        0.025em 0.02em 0 rgba(255, 0, 0, 0.75),
+        0.02em 0 0 rgba(0, 255, 0, 0.75),
+        0 -0.02em 0 rgba(0, 0, 255, 0.75);
+    }
+  }
+  
+  .glitch-text:hover {
+    animation: glitch 0.3s infinite;
+  }
+  
+  /* Hexagon Pattern Background */
+  .hex-pattern {
+    background-image: 
+      linear-gradient(30deg, #0f1419 12%, transparent 12.5%, transparent 87%, #0f1419 87.5%, #0f1419),
+      linear-gradient(150deg, #0f1419 12%, transparent 12.5%, transparent 87%, #0f1419 87.5%, #0f1419),
+      linear-gradient(30deg, #0f1419 12%, transparent 12.5%, transparent 87%, #0f1419 87.5%, #0f1419),
+      linear-gradient(150deg, #0f1419 12%, transparent 12.5%, transparent 87%, #0f1419 87.5%, #0f1419),
+      linear-gradient(60deg, rgba(255, 117, 0, 0.05) 25%, transparent 25.5%, transparent 75%, rgba(255, 117, 0, 0.05) 75%, rgba(255, 117, 0, 0.05)),
+      linear-gradient(60deg, rgba(255, 117, 0, 0.05) 25%, transparent 25.5%, transparent 75%, rgba(255, 117, 0, 0.05) 75%, rgba(255, 117, 0, 0.05));
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  }
+  
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+  
+  /* Rank Badge Styles */
+  .rank-badge {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-bold uppercase tracking-wider;
+  }
+  
+  .rank-contraband {
+    @apply bg-gradient-to-r from-yellow-500 to-yellow-600 text-black;
+  }
+  
+  .rank-ancient {
+    @apply bg-gradient-to-r from-red-500 to-red-600 text-white;
+  }
+  
+  .rank-legendary {
+    @apply bg-gradient-to-r from-pink-500 to-pink-600 text-white;
+  }
+  
+  .rank-mythical {
+    @apply bg-gradient-to-r from-purple-500 to-purple-600 text-white;
+  }
 }
 
 @layer base {
   :root {
+    /* CS2 & Gaming Color Palette */
+    --cs2-orange: 255 117 0;
+    --cs2-orange-dark: 255 94 0;
+    --cs2-orange-light: 255 145 0;
+    --cs2-red: 235 59 90;
+    --cs2-purple: 139 92 246;
+    --cs2-cyan: 79 209 197;
+    --cs2-blue: 59 130 246;
+    --cs2-yellow: 251 191 36;
+    --cs2-green: 34 197 94;
+    
+    /* Background Colors */
+    --bg-primary: 10 10 10;
+    --bg-secondary: 15 20 25;
+    --bg-tertiary: 20 25 35;
+    --bg-card: 18 22 28;
+    
+    /* Border Colors */
+    --border-primary: 255 117 0;
+    --border-secondary: 139 92 246;
+    --border-default: 38 38 38;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
