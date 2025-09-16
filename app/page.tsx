@@ -92,7 +92,6 @@ export default function Home() {
             </div>
             <div>
               <span className="text-2xl font-bold tracking-wider text-white">HUCH</span>
-              <div className="text-xs text-orange-400/80">CRYPTO × GAMING</div>
             </div>
           </a>
 
@@ -223,8 +222,20 @@ export default function Home() {
 
             {/* Main Hero Content */}
             <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-6 py-12">
+              {/* Gachas Coming Soon Banner */}
+              <motion.div
+                className="mb-4" 
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full px-4 py-1.5 backdrop-blur-xl">
+                  <span className="text-xs font-semibold text-purple-300 uppercase tracking-wider">💼 Gachas Coming Soon!</span>
+                </div>
+              </motion.div>
+
               {/* Gaming Badge */}
-            <motion.div
+            {/* <motion.div
                 className="mb-8" 
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -235,7 +246,7 @@ export default function Home() {
                   <span className="text-sm font-semibold text-orange-300 uppercase tracking-wider">Next-Gen CS2 Trading</span>
                   <Crosshair className="w-4 h-4 text-orange-400" />
               </div>
-              </motion.div>
+              </motion.div> */}
 
               <motion.h1
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight text-center mb-6"
@@ -971,7 +982,6 @@ export default function Home() {
                     </div>
                     <div>
                       <span className="text-2xl font-extrabold text-white">HUCH</span>
-                      <div className="text-xs text-orange-400/80 font-mono">CRYPTO × GAMING</div>
                     </div>
                   </div>
                   <p className="text-gray-400 text-sm max-w-xs mb-6">

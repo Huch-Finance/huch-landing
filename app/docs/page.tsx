@@ -47,6 +47,14 @@ export default function DocsPage() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+
+      // Check if we're at the bottom of the page
+      if (window.scrollY + windowHeight >= documentHeight - 10) {
+        setActiveSection("community")
+        return
+      }
 
       for (const section of sections) {
         const element = document.getElementById(section.id)
@@ -374,23 +382,6 @@ export default function DocsPage() {
 
                           <div className="grid md:grid-cols-2 gap-4">
                             <div className="bg-black/20 rounded-lg p-3">
-                              <h5 className="text-sm font-semibold text-[#8564FA] mb-2">Security Features</h5>
-                              <ul className="space-y-1 text-xs">
-                                <li className="flex items-center gap-1">
-                                  <ChevronRight className="w-3 h-3 text-[#8564FA]" />
-                                  <span>Multi-signature bot wallets</span>
-                                </li>
-                                <li className="flex items-center gap-1">
-                                  <ChevronRight className="w-3 h-3 text-[#8564FA]" />
-                                  <span>Automated fraud detection</span>
-                                </li>
-                                <li className="flex items-center gap-1">
-                                  <ChevronRight className="w-3 h-3 text-[#8564FA]" />
-                                  <span>Insurance fund protection</span>
-                                </li>
-                              </ul>
-                            </div>
-                            <div className="bg-black/20 rounded-lg p-3">
                               <h5 className="text-sm font-semibold text-[#8564FA] mb-2">Supported Items</h5>
                               <ul className="space-y-1 text-xs">
                                 <li className="flex items-center gap-1">
@@ -466,7 +457,6 @@ export default function DocsPage() {
                             <ul className="space-y-2 text-sm">
                               <li>• <span className="font-semibold">True Ownership:</span> Proves NFTs are backed by real items</li>
                               <li>• <span className="font-semibold">Exit Strategy:</span> Always able to return to Steam ecosystem</li>
-                              <li>• <span className="font-semibold">Price Stability:</span> NFT value anchored to Steam market prices</li>
                               <li>• <span className="font-semibold">Trust Building:</span> Transparent 1:1 backing system</li>
                             </ul>
                           </div>
@@ -481,7 +471,7 @@ export default function DocsPage() {
                         <div>
                           <h3 className="text-2xl font-bold text-white mb-3">NFT Marketplace</h3>
                           <p className="text-lg mb-4">
-                            A decentralized marketplace designed specifically for tokenized gaming assets with zero platform fees.
+                            A decentralized marketplace designed specifically for tokenized gaming assets with zero sellers fees.
                           </p>
                           
                           <div className="grid md:grid-cols-2 gap-4 mb-4">
@@ -503,7 +493,7 @@ export default function DocsPage() {
                                 <li className="flex items-start gap-2">
                                   <Shield className="w-4 h-4 text-purple-400 mt-0.5" />
                                   <div>
-                                    <span className="font-semibold text-white">No Platform Fees:</span> Keep 100% of your sale price
+                                    <span className="font-semibold text-white">No Sellers Fees:</span> Keep 100% of your sale price
                                   </div>
                                 </li>
                                 <li className="flex items-start gap-2">
@@ -533,7 +523,7 @@ export default function DocsPage() {
                                 <li className="flex items-start gap-2">
                                   <Wallet className="w-4 h-4 text-purple-400 mt-0.5" />
                                   <div>
-                                    <span className="font-semibold text-white">USDC Payments:</span> All transactions processed in USDC stablecoin
+                                    <span className="font-semibold text-white">USDC Payments:</span> All transactions processed in USDC
                                   </div>
                                 </li>
                                 <li className="flex items-start gap-2">
@@ -551,7 +541,7 @@ export default function DocsPage() {
                             <div className="grid md:grid-cols-3 gap-3">
                               <div className="text-center">
                                 <div className="text-2xl font-bold text-white">0%</div>
-                                <p className="text-xs text-zinc-400">Platform Fees</p>
+                                <p className="text-xs text-zinc-400">Sellers Fees</p>
                               </div>
                               <div className="text-center">
                                 <div className="text-2xl font-bold text-white">&lt;1s</div>
@@ -652,12 +642,7 @@ export default function DocsPage() {
                             <td className="text-center py-3 px-4 text-yellow-400">~</td>
                           </tr>
                           <tr className="border-b border-zinc-800">
-                            <td className="py-3 px-4">Value Retained</td>
-                            <td className="text-center py-3 px-4">65%</td>
-                            <td className="text-center py-3 px-4">70-85%</td>
-                          </tr>
-                          <tr className="border-b border-zinc-800">
-                            <td className="py-3 px-4">Future Price Gains</td>
+                              <td className="py-3 px-4">Future Price Gains</td>
                             <td className="text-center py-3 px-4 text-green-400">✓</td>
                             <td className="text-center py-3 px-4 text-red-400">✗</td>
                           </tr>
@@ -691,9 +676,6 @@ export default function DocsPage() {
                 </div>
 
                 <div className="space-y-8 text-zinc-300">
-                  <p className="text-lg leading-relaxed">
-                    HUCH combines cutting-edge blockchain technology with gaming to deliver a comprehensive platform.
-                  </p>
 
                   <div className="grid gap-6">
                     <div className="bg-black/30 rounded-xl p-6 border border-zinc-800/50">
@@ -704,7 +686,7 @@ export default function DocsPage() {
                         <div className="flex-1">
                           <h3 className="text-xl font-semibold text-white mb-2">Steam-to-NFT Tokenization</h3>
                           <p className="mb-3">
-                            Seamlessly convert your CS2 skins from Steam inventory into blockchain NFTs with a secure 7-day holding period for verification.
+                            Seamlessly convert your CS2 skins from your Steam inventory into Solana NFTs.
                           </p>
                           <ul className="space-y-1 text-sm">
                             <li className="flex items-center gap-2">
@@ -788,7 +770,7 @@ export default function DocsPage() {
                         <div className="flex-1">
                           <h3 className="text-xl font-semibold text-white mb-2">NFT Marketplace</h3>
                           <p className="mb-3">
-                            Trade tokenized CS2 skins on our decentralized marketplace with zero platform fees and instant settlement.
+                            Trade tokenized CS2 skins on our MagicEden marketplace with zero sellers fees and instant settlement.
                           </p>
                           <ul className="space-y-1 text-sm">
                             <li className="flex items-center gap-2">
@@ -916,7 +898,7 @@ export default function DocsPage() {
 
                 <div className="space-y-6 text-zinc-300">
                   <p className="text-lg leading-relaxed">
-                    HUCH is pioneering the convergence of gaming and DeFi, creating new possibilities for digital asset ownership and value extraction.
+                    HUCH is pioneering the convergence of gaming and DeFi, creating new possibilities for digital asset ownership.
                   </p>
 
                   <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-500/20">
@@ -986,7 +968,7 @@ export default function DocsPage() {
                   </p>
 
 
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     <div className="bg-black/30 rounded-xl p-6 border border-zinc-800/50">
                       <Heart className="w-8 h-8 text-red-400 mb-3" />
                       <h3 className="text-xl font-semibold text-white mb-2">Community First</h3>
@@ -995,19 +977,12 @@ export default function DocsPage() {
                       </p>
                     </div>
 
-                    <div className="bg-black/30 rounded-xl p-6 border border-zinc-800/50">
-                      <Users className="w-8 h-8 text-blue-400 mb-3" />
-                      <h3 className="text-xl font-semibold text-white mb-2">Governance</h3>
-                      <p className="text-sm">
-                        Token holders participate in platform decisions and protocol upgrades.
-                      </p>
-                    </div>
 
                     <div className="bg-black/30 rounded-xl p-6 border border-zinc-800/50">
                       <TrendingUp className="w-8 h-8 text-green-400 mb-3" />
                       <h3 className="text-xl font-semibold text-white mb-2">Revenue Sharing</h3>
                       <p className="text-sm">
-                        Platform fees are distributed back to active community members.
+                        50% of royalties are used to buy back $HUCH.
                       </p>
                     </div>
                   </div>
