@@ -16,14 +16,24 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "HUCH",
+    default: "HUCH - Tokenize Your CS2 Skins & Gachas",
     template: "%s | HUCH",
   },
   description:
-    "HUCH, take loan from your cs2 skins",
+    "Tokenize your CS2 skins and gachas on the blockchain. Turn your valuable gaming assets into tradeable tokens and unlock liquidity without selling.",
   keywords: [
     "counter strike 2",
     "CS2",
+    "tokenize",
+    "blockchain",
+    "gaming assets",
+    "skins",
+    "gachas",
+    "NFT",
+    "cryptocurrency",
+    "gaming finance",
+    "DeFi",
+    "skin tokenization",
   ],
   authors: [{ name: "HUCH" }],
   creator: "HUCH",
@@ -54,23 +64,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://huch.finance",
     siteName: "HUCH",
-    title: "HUCH, take loan from your cs2 skin",
+    title: "HUCH - Tokenize Your CS2 Skins & Gachas",
     description:
-      "The smart alternative to selling. Get cash now and keep your valuable skins. Repay when you're ready and get them back.",
+      "Transform your CS2 skins and gachas into blockchain tokens. Access liquidity, trade seamlessly, and maintain ownership of your valuable gaming assets.",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "HUCH Logo",
+        alt: "HUCH - Tokenize CS2 Skins & Gachas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HUCH, take loan from your cs2 skin",
+    title: "HUCH - Tokenize Your CS2 Skins & Gachas",
     description:
-      "The smart alternative to selling. Get cash now and keep your valuable skins. Repay when you're ready and get them back.",
+      "Transform your CS2 skins and gachas into blockchain tokens. Access liquidity, trade seamlessly, and maintain ownership of your valuable gaming assets.",
     images: ["/logo.png"],
     creator: "@huch",
     site: "@huch",
@@ -78,7 +88,7 @@ export const metadata: Metadata = {
   applicationName: "HUCH",
   appleWebApp: {
     capable: true,
-    title: "HUCH",
+    title: "HUCH - Tokenize CS2 Assets",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {
