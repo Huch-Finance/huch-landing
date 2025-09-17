@@ -16,24 +16,14 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "HUCH - Tokenize Your CS2 Skins",
+    default: "HUCH",
     template: "%s | HUCH",
   },
   description:
-    "Tokenize your CS2 skins on Solana. Turn your valuable gaming assets into tradeable tokens and unlock liquidity without selling.",
+    "HUCH, take loan from your cs2 skins",
   keywords: [
     "counter strike 2",
     "CS2",
-    "tokenize",
-    "blockchain",
-    "gaming assets",
-    "skins",
-    "gachas",
-    "NFT",
-    "cryptocurrency",
-    "gaming finance",
-    "DeFi",
-    "skin tokenization",
   ],
   authors: [{ name: "HUCH" }],
   creator: "HUCH",
@@ -45,18 +35,23 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/logo2.0.png",
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-32x32.png",
         sizes: "32x32",
         type: "image/png",
       },
       {
-        url: "/logo2.0.png",
+        url: "/android-chrome-192x192.png",
         sizes: "192x192",
         type: "image/png",
       },
     ],
-    shortcut: "/logo2.0.png",
-    apple: "/logo2.0.png",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
   openGraph: {
@@ -64,31 +59,31 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://huch.finance",
     siteName: "HUCH",
-    title: "HUCH - Tokenize Your CS2 Skins",
+    title: "HUCH, take loan from your cs2 skin",
     description:
-      "Transform your CS2 skins into Solana NFTs. Access liquidity, trade seamlessly, and maintain ownership of your valuable gaming assets.",
+      "The smart alternative to selling. Get cash now and keep your valuable skins. Repay when you're ready and get them back.",
     images: [
       {
-        url: "/logo2.0.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "HUCH - Tokenize CS2 Skins",
+        alt: "HUCH Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HUCH - Tokenize Your CS2 Skins",
+    title: "HUCH, take loan from your cs2 skin",
     description:
-      "Transform your CS2 skins into Solana NFTs. Access liquidity, trade seamlessly, and maintain ownership of your valuable gaming assets.",
-    images: ["/logo2.0.png"],
+      "The smart alternative to selling. Get cash now and keep your valuable skins. Repay when you're ready and get them back.",
+    images: ["/logo.png"],
     creator: "@huch",
     site: "@huch",
   },
   applicationName: "HUCH",
   appleWebApp: {
     capable: true,
-    title: "HUCH - Tokenize CS2 Assets",
+    title: "HUCH",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {
