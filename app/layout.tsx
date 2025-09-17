@@ -16,11 +16,11 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "HUCH - Tokenize Your CS2 Skins & Gachas",
+    default: "HUCH - Tokenize Your CS2 Skins",
     template: "%s | HUCH",
   },
   description:
-    "Tokenize your CS2 skins and gachas on the blockchain. Turn your valuable gaming assets into tradeable tokens and unlock liquidity without selling.",
+    "Tokenize your CS2 skins on Solana. Turn your valuable gaming assets into tradeable tokens and unlock liquidity without selling.",
   keywords: [
     "counter strike 2",
     "CS2",
@@ -45,18 +45,18 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/logo.png",
+        url: "/logo2.0.png",
         sizes: "32x32",
         type: "image/png",
       },
       {
-        url: "/logo.png",
+        url: "/logo2.0.png",
         sizes: "192x192",
         type: "image/png",
       },
     ],
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    shortcut: "/logo2.0.png",
+    apple: "/logo2.0.png",
   },
   manifest: "/site.webmanifest",
   openGraph: {
@@ -64,24 +64,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://huch.finance",
     siteName: "HUCH",
-    title: "HUCH - Tokenize Your CS2 Skins & Gachas",
+    title: "HUCH - Tokenize Your CS2 Skins",
     description:
-      "Transform your CS2 skins and gachas into blockchain tokens. Access liquidity, trade seamlessly, and maintain ownership of your valuable gaming assets.",
+      "Transform your CS2 skins into Solana NFTs. Access liquidity, trade seamlessly, and maintain ownership of your valuable gaming assets.",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo2.0.png",
         width: 1200,
         height: 630,
-        alt: "HUCH - Tokenize CS2 Skins & Gachas",
+        alt: "HUCH - Tokenize CS2 Skins",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HUCH - Tokenize Your CS2 Skins & Gachas",
+    title: "HUCH - Tokenize Your CS2 Skins",
     description:
-      "Transform your CS2 skins and gachas into blockchain tokens. Access liquidity, trade seamlessly, and maintain ownership of your valuable gaming assets.",
-    images: ["/logo.png"],
+      "Transform your CS2 skins into Solana NFTs. Access liquidity, trade seamlessly, and maintain ownership of your valuable gaming assets.",
+    images: ["/logo2.0.png"],
     creator: "@huch",
     site: "@huch",
   },
