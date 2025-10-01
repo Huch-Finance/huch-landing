@@ -230,7 +230,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full px-4 py-1.5 backdrop-blur-xl">
-                  <span className="text-xs font-semibold text-purple-300 uppercase tracking-wider">💼 Gachas Coming Soon!</span>
+                  <span className="text-xs font-semibold text-purple-300 uppercase tracking-wider">💼 Gachas Are Now Live!</span>
                 </div>
               </motion.div>
 
